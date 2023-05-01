@@ -1,0 +1,107 @@
+{
+"select * from (\n\nselect distinct 5 as event_list_order, 'Competitive Intelligence' as key_events_label, a.rec_count, amg_number as ipp_short_name, competitor, '' as data_readout_type, brief_title as description, coalesce(x.country, '') as geographic_area, start_date, end_date, competitor_asset\nFROM edf_prd_cdl_clindev_cistrategy_publish.ci_event x join edf_prd_cdl_clindev_cistrategy_publish.ci_asset y on x.asset = y.competitor_asset \ncross join (select count() as rec_count from (select distinct 5 as event_list_order, 'Competitive Intelligence' as key_events_label, competitor_asset, competitor, brief_title  as description, coalesce(x.country, '') as geographic_area, start_date, end_date\nFROM edf_prd_cdl_clindev_cistrategy_publish.ci_event x join edf_prd_cdl_clindev_cistrategy_publish.ci_asset y on x.asset = y.competitor_asset \n\tWHERE  start_date between now() AND  date_add('month', 3, now()) \n\tAND country in ('US', 'EU', 'Japan', 'China'))) as a\nWHERE  start_date  between now() AND  date_add('month', 3, now())\nAND country  in ('US', 'EU', 'Japan', 'China')\n\n)\nORDER BY event_list_order, start_date, description": [
+	{
+		"event_list_order" : 5,
+		"key_events_label" : "Competitive Intelligence",
+		"rec_count" : 7,
+		"ipp_short_name" : "AMG 145",
+		"competitor" : "LIB Therapeutics",
+		"data_readout_type" : "",
+		"description" : "Ph3 completion",
+		"geographic_area" : "US",
+		"start_date" : "2022-09-30",
+		"end_date" : "2022-09-30",
+		"competitor_asset" : "Lerodalcibep"
+	},
+	{
+		"event_list_order" : 5,
+		"key_events_label" : "Competitive Intelligence",
+		"rec_count" : 7,
+		"ipp_short_name" : "AMG 157",
+		"competitor" : "Genentech \/ Roche, Novartis",
+		"data_readout_type" : "",
+		"description" : "Auto-injector US approval",
+		"geographic_area" : "US",
+		"start_date" : "2022-10-01",
+		"end_date" : "2022-12-31",
+		"competitor_asset" : "Xolair"
+	},
+	{
+		"event_list_order" : 5,
+		"key_events_label" : "Competitive Intelligence",
+		"rec_count" : 7,
+		"ipp_short_name" : "ABP 938",
+		"competitor" : "Biocon\/Viatris",
+		"data_readout_type" : "",
+		"description" : "Est Biocon EYLEA biosimilar US approval",
+		"geographic_area" : "US",
+		"start_date" : "2022-10-01",
+		"end_date" : "2022-12-31",
+		"competitor_asset" : "MYL-1701P"
+	},
+	{
+		"event_list_order" : 5,
+		"key_events_label" : "Competitive Intelligence",
+		"rec_count" : 7,
+		"ipp_short_name" : "AMG 145",
+		"competitor" : "Novartis",
+		"data_readout_type" : "",
+		"description" : "Est Italy Launch",
+		"geographic_area" : "EU",
+		"start_date" : "2022-10-01",
+		"end_date" : "2022-12-31",
+		"competitor_asset" : "Leqvio"
+	},
+	{
+		"event_list_order" : 5,
+		"key_events_label" : "Competitive Intelligence",
+		"rec_count" : 7,
+		"ipp_short_name" : "AMG 157",
+		"competitor" : "Regeneron, Sanofi",
+		"data_readout_type" : "",
+		"description" : "US Approval",
+		"geographic_area" : "US",
+		"start_date" : "2022-10-01",
+		"end_date" : "2022-12-31",
+		"competitor_asset" : "Dupixent"
+	},
+	{
+		"event_list_order" : 5,
+		"key_events_label" : "Competitive Intelligence",
+		"rec_count" : 7,
+		"ipp_short_name" : "AMG 451",
+		"competitor" : "Regeneron, Sanofi",
+		"data_readout_type" : "",
+		"description" : "US Approval",
+		"geographic_area" : "US",
+		"start_date" : "2022-10-01",
+		"end_date" : "2022-12-31",
+		"competitor_asset" : "Dupixent"
+	},
+	{
+		"event_list_order" : 5,
+		"key_events_label" : "Competitive Intelligence",
+		"rec_count" : 7,
+		"ipp_short_name" : "AMG 510",
+		"competitor" : "Mirati",
+		"data_readout_type" : "",
+		"description" : "US accelerated approval in 2L+ NSCLC",
+		"geographic_area" : "US",
+		"start_date" : "2022-10-01",
+		"end_date" : "2022-12-31",
+		"competitor_asset" : "Adagrasib"
+	},
+	{
+		"event_list_order" : 5,
+		"key_events_label" : "Competitive Intelligence",
+		"rec_count" : 7,
+		"ipp_short_name" : "AMG 145",
+		"competitor" : "LIB Therapeutics",
+		"data_readout_type" : "",
+		"description" : "Ph3 Completion",
+		"geographic_area" : "US",
+		"start_date" : "2022-10-31",
+		"end_date" : "2022-10-31",
+		"competitor_asset" : "Lerodalcibep"
+	}
+]}

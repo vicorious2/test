@@ -1,0 +1,67 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prioritized-agenda-api
+  labels:
+    app: prioritized-agenda-api
+spec:
+  selector:
+    matchLabels:
+      app: prioritized-agenda-api
+  template:
+    metadata:
+      labels:
+        app: prioritized-agenda-api
+    spec:
+      serviceAccountName: prioritized-agenda-api
+      containers:
+        - name: prioritized-agenda-api
+          resources:
+            limits:
+              cpu: 1000m
+              memory: 1Gi
+            requests:
+              cpu: 500m
+              memory: 512M
+          env:
+            - name: BUCKET_NAME
+              valueFrom:
+                configMapKeyRef:
+                  name: prioritized-agenda-api-map
+                  key: BUCKET_NAME
+            - name: PA_ENV
+              valueFrom:
+                configMapKeyRef:
+                  name: prioritized-agenda-api-map
+                  key: PA_ENV
+            - name: AWS_DEFAULT_REGION
+              valueFrom:
+                secretKeyRef:
+                  name: prioritized-agenda-api-env-secret
+                  key: AWS_DEFAULT_REGION
+                  optional: false
+            - name: AWS_ACCESS_KEY_ID
+              valueFrom:
+                secretKeyRef:
+                  name: prioritized-agenda-api-env-secret
+                  key: AWS_ACCESS_KEY_ID
+                  optional: false
+            - name: AWS_SECRET_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: prioritized-agenda-api-env-secret
+                  key: AWS_SECRET_ACCESS_KEY
+                  optional: false
+            - name: AWS_DB_ACCESS_KEY_ID
+              valueFrom:
+                secretKeyRef:
+                  name: prioritized-agenda-api-env-secret
+                  key: AWS_DB_ACCESS_KEY_ID
+                  optional: false
+            - name: AWS_DB_SECRET_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: prioritized-agenda-api-env-secret
+                  key: AWS_DB_SECRET_ACCESS_KEY
+                  optional: false

@@ -1,0 +1,124 @@
+# You can override the included template(s) by including variable overrides
+# SAST customization: https://docs.gitlab.com/ee/user/application_security/sast/#customizing-the-sast-settings
+# Secret Detection customization: https://docs.gitlab.com/ee/user/application_security/secret_detection/#customizing-settings
+# Dependency Scanning customization: https://docs.gitlab.com/ee/user/application_security/dependency_scanning/#customizing-the-dependency-scanning-settings
+# Container Scanning customization: https://docs.gitlab.com/ee/user/application_security/container_scanning/#customizing-the-container-scanning-settings
+# Note that environment variables can be set in several places
+# See https://docs.gitlab.com/ee/ci/variables/#cicd-variable-precedence
+stages:
+# - install
+- scan
+#- build
+- test
+- deploy
+variables:
+  PYTHON_VERSION: '3.11'
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  VAR_ENC_KEY: "${ENC_KEY}"
+  VAR_AWS_DYNAMO_ACCESS_KEY_ID: "${AWS_DYNAMO_ACCESS_KEY_ID}"
+  VAR_AWS_DYNAMO_SECRET_ACCESS_KEY: "${AWS_DYNAMO_SECRET_ACCESS_KEY}"
+  VAR_SVC_PW: "${SVC_PW}"
+  VAR_SVC_UN: "${SVC_UN}"
+
+
+cache:
+  paths:
+    - .cache/pip
+
+
+.install:
+  image: python:$PYTHON_VERSION
+  before_script:
+  - echo "VAR_LDAP_URI=${VAR_LDAP_URI}"
+  - apt-get update -q -y
+  - apt-get --assume-yes install python3-pip
+  - pip install -r requirements.txt
+  except:
+  - tags
+
+lint:
+  extends: .install
+  stage: scan
+  script:
+    - black --check .
+scan-veracode:
+  image: veracode/api-wrapper-java:latest
+  stage: scan
+  script:
+    - VERSION_LABEL=$(date +"%d %b %Y")
+    - zip -qdgds 10m -r project.zip .
+    - >-
+      java -jar /opt/veracode/api-wrapper.jar
+      -vid "${VERACODE_API_ID}"
+      -vkey "${VERACODE_API_KEY}"
+      -action UploadAndScan
+      -autoscan true 
+      -createprofile false 
+      -appname "Amgen Sensing Experience - Prioritized Agenda BE"
+      -filepath project.zip
+      -version "$VERSION_LABEL Static ($CI_COMMIT_SHORT_SHA)"
+      2>&1 
+      | tee policy_scan_output.txt
+  after_script:
+  - |
+    echo -e "NOTE: Policy Scan Test results are available in the Veracode Platform"
+    echo -e "For any queries please contact code.review@amgen.com \n"
+    echo -e "${TXT_CLEAR}\n\n"
+  artifacts:
+    name: veracode-POLICY-SCAN-$CI_COMMIT_REF_NAME-$CI_COMMIT_SHORT_SHA
+    expose_as: Veracode Policy Scan Results
+    paths:
+    - policy_scan_output.txt
+    when: always
+  allow_failure: true
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+    - if: $CI_PIPELINE_SOURCE == "push"
+      when: never
+sast:
+  stage: test
+include:
+- template: Security/SAST.gitlab-ci.yml
+unit_test:
+  stage: test
+  image: python:$PYTHON_VERSION
+  before_script:
+    - export AWS_DB_ACCESS_KEY_ID=${AWS_DB_ACCESS_KEY_ID}
+    - export AWS_DB_SECRET_ACCESS_KEY=${AWS_DB_SECRET_ACCESS_KEY}
+  script:
+  - export AWS_DB_ACCESS_KEY_ID=${AWS_DB_ACCESS_KEY_ID}
+  - export AWS_DB_SECRET_ACCESS_KEY=${AWS_DB_SECRET_ACCESS_KEY}
+  - apt-get update -q -y
+  - apt-get --assume-yes install python3-pip
+  - pip install -r requirements.txt
+  - coverage run -m pytest
+  - coverage report -m
+  - coverage xml
+  coverage: '/(?i)total.*? (100(?:\.0+)?\%|[1-9]?\d(?:\.\d+)?\%)$/'
+  artifacts:
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage.xml
+  except:
+  - tags
+build:
+  stage: deploy
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint:
+    - ''
+  script:
+  - mkdir -p /kaniko/.docker
+  - echo "{\"auths\":{\"${CI_REGISTRY}\":{\"auth\":\"$(printf "%s:%s" "${CI_REGISTRY_USER}"
+    "${CI_REGISTRY_PASSWORD}" | base64 | tr -d '\n')\"}}}" > /kaniko/.docker/config.json
+  - /kaniko/executor --context "${CI_PROJECT_DIR}" --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
+    --destination "${CI_REGISTRY_IMAGE}:${CI_COMMIT_TAG}" 
+    --build-arg "ARG_ENC_KEY=${VAR_ENC_KEY}"
+    --build-arg "ARG_AWS_DYNAMO_ACCESS_KEY_ID=${VAR_AWS_DYNAMO_ACCESS_KEY_ID}"
+    --build-arg "ARG_AWS_DYNAMO_SECRET_ACCESS_KEY=${VAR_AWS_DYNAMO_SECRET_ACCESS_KEY}"
+    --build-arg "ARG_SVC_UN=${VAR_SVC_UN}"
+    --build-arg "ARG_SVC_PW=${VAR_SVC_PW}"
+
+  only:
+  - tags

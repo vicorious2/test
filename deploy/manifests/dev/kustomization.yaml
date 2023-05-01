@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../bases/prioritized-agenda-api
+  - ingress.yaml
+  - awscli-pod.yaml
+  - prioritized-agenda-api-env-secret-dev.yaml
+
+configMapGenerator:
+  - name: prioritized-agenda-api-map
+    env: config.properties
+
+patchesStrategicMerge:
+  - deployment-patch.yaml
+  - prioritized-agenda-api-serviceaccount-patch.yaml

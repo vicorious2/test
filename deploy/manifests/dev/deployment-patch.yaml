@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prioritized-agenda-api
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: prioritized-agenda-api
+  template:
+    metadata:
+      labels:
+        app: prioritized-agenda-api
+    spec:
+      serviceAccountName: prioritized-agenda-api
+      containers:
+        - name: prioritized-agenda-api
+          image: registry.nimbus.amgen.com/gitlab-rtsensing/rtsensing-prioritized-agenda/backend/rtsensing-pa-api:1.7.15
+          resources:
+            limits:
+              cpu: 1000m
+              memory: 1Gi
+            requests:
+              cpu: 500m
+              memory: 512M
+          env:
+            - name: SERVICE_ACCOUNT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: prioritized-agenda-api-env-secret
+                  key: SERVICE_ACCOUNT_PASSWORD
+                  optional: false
+            - name: SERVICE_ACCOUNT_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: prioritized-agenda-api-env-secret
+                  key: SERVICE_ACCOUNT_USERNAME
+                  optional: false
+      imagePullSecrets:
+        - name: prioritized-agenda-api-registry-secret-dev

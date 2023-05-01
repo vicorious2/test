@@ -1,0 +1,212 @@
+[
+	{
+		"key_events_label" : "Competitor Data",
+		"rec_count" : 22,
+		"description" : "IDE397 data package submission to GSK for opt-in decision",
+		"geographic_area" : "",
+		"end_date" : "2022-04-01"
+	},
+	{
+		"key_events_label" : "Competitor Data",
+		"rec_count" : 22,
+		"description" : "IDE397 Gastric \/ Esophageal cancer expansion cohort initiation",
+		"geographic_area" : "",
+		"end_date" : "2022-04-01"
+	},
+	{
+		"key_events_label" : "Competitor Data",
+		"rec_count" : 22,
+		"description" : "Lilly KRAS G12C FIH Data Update",
+		"geographic_area" : "Global",
+		"end_date" : "2022-04-01"
+	},
+	{
+		"key_events_label" : "Competitor Data",
+		"rec_count" : 22,
+		"description" : "IDE397 NSCLC expansion cohort initiation",
+		"geographic_area" : "",
+		"end_date" : "2022-04-01"
+	},
+	{
+		"key_events_label" : "Competitor Data",
+		"rec_count" : 22,
+		"description" : "IDE397 Tumor-agnostic (squamous and non-squamous) expansion cohort initiation",
+		"geographic_area" : "",
+		"end_date" : "2022-04-01"
+	},
+	{
+		"key_events_label" : "Competitor Data",
+		"rec_count" : 22,
+		"description" : "Roche Potential for First Ph 1 Mono Data",
+		"geographic_area" : "Global",
+		"end_date" : "2022-06-01"
+	},
+	{
+		"key_events_label" : "Competitor Data",
+		"rec_count" : 22,
+		"description" : "BCMA TCE; Elranatamab pivotal data (MagnetisMM-3)",
+		"geographic_area" : "",
+		"end_date" : "2022-07-01"
+	},
+	{
+		"key_events_label" : "Competitor Data",
+		"rec_count" : 22,
+		"description" : "Dupixent Eosinophilic Esophagitis US approval",
+		"geographic_area" : "US",
+		"end_date" : "2022-07-01"
+	},
+	{
+		"key_events_label" : "Competitor Data",
+		"rec_count" : 22,
+		"description" : "Estimated Ph2 Inclisiran (Leqvio) trial(ORION-15) in Japan data readout",
+		"geographic_area" : "JAPAC",
+		"end_date" : "2022-07-01"
+	},
+	{
+		"key_events_label" : "Competitor Data",
+		"rec_count" : 22,
+		"description" : "Estimated Ph3 Inclisiran (Leqvio) trial (ORION-18) in China data readout",
+		"geographic_area" : "JAPAC",
+		"end_date" : "2022-07-01"
+	},
+	{
+		"key_events_label" : "Competitor Data",
+		"rec_count" : 22,
+		"description" : "Estimated Lerodalcibep Ph3 LIBerate-H2H vs Repatha vs alirocumab",
+		"geographic_area" : "",
+		"end_date" : "2022-08-26"
+	},
+	{
+		"key_events_label" : "Competitor Data",
+		"rec_count" : 22,
+		"description" : "Ph3 Reyvow, 5H-T1 oral Ped Acute",
+		"geographic_area" : "",
+		"end_date" : "2022-08-30"
+	},
+	{
+		"key_events_label" : "Competitor Data",
+		"rec_count" : 22,
+		"description" : "Deucravacitinib approval in US and JP",
+		"geographic_area" : "GlobalUS",
+		"end_date" : "2022-09-01"
+	},
+	{
+		"key_events_label" : "Competitor Data",
+		"rec_count" : 22,
+		"description" : "Ph2 LY3451838 trial",
+		"geographic_area" : "",
+		"end_date" : "2022-09-30"
+	},
+	{
+		"key_events_label" : "Competitor Data",
+		"rec_count" : 22,
+		"description" : "Lerodalcibep Ph3 LIBEerate-H2H vs Repatha vs alirocumab completion",
+		"geographic_area" : "US",
+		"end_date" : "2022-09-30"
+	},
+	{
+		"key_events_label" : "Competitor Data",
+		"rec_count" : 22,
+		"description" : "LY3819469 (SC) Ph1 completion",
+		"geographic_area" : "US, EU",
+		"end_date" : "2022-10-01"
+	},
+	{
+		"key_events_label" : "Competitor Data",
+		"rec_count" : 22,
+		"description" : "Vazkepa's Estimated Launch in UK",
+		"geographic_area" : "EU",
+		"end_date" : "2022-10-01"
+	},
+	{
+		"key_events_label" : "Competitor Data",
+		"rec_count" : 22,
+		"description" : "Lerodalcibep Ph3 LIBerate-HR completion",
+		"geographic_area" : "US, Global",
+		"end_date" : "2022-10-31"
+	},
+	{
+		"key_events_label" : "Competitor Data",
+		"rec_count" : 22,
+		"description" : "Lerodalcibep Ph3 LIBerate-CVD",
+		"geographic_area" : "US",
+		"end_date" : "2022-10-31"
+	},
+	{
+		"key_events_label" : "Competitor Data",
+		"rec_count" : 22,
+		"description" : "Estimated NN6435 Ph2 Readout",
+		"geographic_area" : "",
+		"end_date" : "2022-11-05"
+	},
+	{
+		"key_events_label" : "Competitor Data",
+		"rec_count" : 22,
+		"description" : "Estimated AZD8233 Ph2 SOLANO Readout",
+		"geographic_area" : "",
+		"end_date" : "2022-11-05"
+	},
+	{
+		"key_events_label" : "Competitor Data",
+		"rec_count" : 22,
+		"description" : "Deucravacitinib second Ph2 UC topline data release",
+		"geographic_area" : "",
+		"end_date" : "2024-01-01"
+	},
+	{
+		"key_events_label" : "Filings",
+		"rec_count" : 3,
+		"description" : "Tezepelumab Severe Asthma",
+		"geographic_area" : "European Union",
+		"end_date" : "2022-08-31"
+	},
+	{
+		"key_events_label" : "Filings",
+		"rec_count" : 3,
+		"description" : "Nplate 1L Aplastic Anemia",
+		"geographic_area" : "Japan",
+		"end_date" : "2022-09-22"
+	},
+	{
+		"key_events_label" : "Filings",
+		"rec_count" : 3,
+		"description" : "Otezla Genital Psoriasis",
+		"geographic_area" : "United States",
+		"end_date" : "2022-10-12"
+	},
+	{
+		"key_events_label" : "Launches",
+		"rec_count" : 5,
+		"description" : "AMG 397 MM, MCL1 p.o.",
+		"geographic_area" : "United States",
+		"end_date" : "2022-09-09"
+	},
+	{
+		"key_events_label" : "Launches",
+		"rec_count" : 5,
+		"description" : "Otezla Psoriasis PSO (moderate to severe)",
+		"geographic_area" : "China",
+		"end_date" : "2022-09-15"
+	},
+	{
+		"key_events_label" : "Launches",
+		"rec_count" : 5,
+		"description" : "AMGEVITA",
+		"geographic_area" : "United States",
+		"end_date" : "2022-09-30"
+	},
+	{
+		"key_events_label" : "Launches",
+		"rec_count" : 5,
+		"description" : "AMG 420 MM, BCMA BiTE",
+		"geographic_area" : "European Union",
+		"end_date" : "2022-11-07"
+	},
+	{
+		"key_events_label" : "Launches",
+		"rec_count" : 5,
+		"description" : "Omecamtiv Mecarbil",
+		"geographic_area" : "China",
+		"end_date" : "2022-11-09"
+	}
+]

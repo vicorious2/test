@@ -1,0 +1,629 @@
+{
+    "items": [
+        {
+            "name": "Repatha",
+            "archetype": "Commercial",
+            "value": 3,
+            "focus": 3,
+            "order": 1,
+            "href": "https://www.google.com",
+            "status": "Red",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Otezla",
+            "archetype": "Commercial",
+            "value": 3,
+            "focus": 3,
+            "order": 2,
+            "href": "https://www.google.com",
+            "status": "Yellow",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Prolia and Evenity",
+            "archetype": "Commercial",
+            "value": 3,
+            "focus": 3,
+            "order": 3,
+            "href": "https://www.google.com",
+            "status": "Yellow",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Tezspire",
+            "archetype": "Commercial",
+            "value": 3,
+            "focus": 3,
+            "order": 4,
+            "href": "https://www.google.com",
+            "status": "Yellow",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Horizon Integration Planning",
+            "archetype": "NPBI",
+            "value": 3,
+            "focus": 3,
+            "order": 5,
+            "href": "https://www.google.com",
+            "status": "Green",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Talent, including DI&B",
+            "archetype": "NPBI",
+            "value": 3,
+            "focus": 3,
+            "order": 6,
+            "href": "https://www.google.com",
+            "status": "Green",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "LUMAKRAS",
+            "archetype": "Pipeline",
+            "value": 2,
+            "focus": 3,
+            "square": 2,
+            "order": 1,
+            "href": "https://www.google.com",
+            "status": "Green",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Process Simplification: End-to-to-End Clinical Trials",
+            "archetype": "NPBI",
+            "value": 2,
+            "focus": 3,
+            "square": 2,
+            "order": 2,
+            "href": "https://www.google.com",
+            "status": "Green",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Tavneos",
+            "archetype": "Commercial",
+            "value": 2,
+            "focus": 3,
+            "square": 2,
+            "order": 3,
+            "href": "https://www.google.com",
+            "status": "Red",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Rocatinlimab",
+            "archetype": "Pipeline",
+            "value": 3,
+            "focus": 2,
+            "square": 2,
+            "order": 4,
+            "href": "https://www.google.com",
+            "status": "Red",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "AMJEVITA (Humira) US Launch",
+            "archetype": "Commercial",
+            "value": 3,
+            "focus": 2,
+            "square": 2,
+            "order": 5,
+            "href": "https://www.google.com",
+            "status": "Red",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "AMG 133 & Obesity Portfolio",
+            "archetype": "Pipeline",
+            "value": 3,
+            "focus": 2,
+            "square": 2,
+            "order": 6,
+            "href": "https://www.google.com",
+            "status": "Yellow",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Olpasiran",
+            "archetype": "Pipeline",
+            "value": 3,
+            "focus": 2,
+            "square": 2,
+            "order": 7,
+            "href": "https://www.google.com",
+            "status": "Yellow",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Business Development active projects",
+            "archetype": "NPBI",
+            "value": 3,
+            "focus": 2,
+            "square": 2,
+            "order": 8,
+            "href": "https://www.google.com",
+            "status": "Yellow",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Prostate portfolio (AMG 340, AMG 509)",
+            "archetype": "Pipeline",
+            "value": 3,
+            "focus": 2,
+            "square": 3,
+            "order": 1,
+            "href": "https://www.google.com",
+            "status": "Yellow",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Tarlatamab",
+            "archetype": "Pipeline",
+            "value": 3,
+            "focus": 2,
+            "square": 3,
+            "order": 2,
+            "href": "https://www.google.com",
+            "status": "Yellow",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Bemarituzumab",
+            "archetype": "Pipeline",
+            "value": 3,
+            "focus": 2,
+            "square": 3,
+            "order": 3,
+            "href": "https://www.google.com",
+            "status": "Red",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "id": 18,
+            "name": "Footprint Optimization",
+            "archetype": "NPBI",
+            "value": 1,
+            "focus": 3,
+            "square": 4,
+            "order": 1,
+            "href": "https://www.google.com",
+            "status": "Red",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Process Simplification: Commercialization",
+            "archetype": "PS",
+            "value": 2,
+            "focus": 2,
+            "square": 5,
+            "order": 2,
+            "href": "https://www.google.com",
+            "status": "Red",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "BLINCYTO",
+            "archetype": "Commercial",
+            "value": 2,
+            "focus": 2,
+            "square": 5,
+            "order": 1,
+            "href": "https://www.google.com",
+            "status": "Red",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Process Simplification: Quality",
+            "archetype": "NPBI",
+            "value": 1,
+            "focus": 2,
+            "square": 4,
+            "order": 1,
+            "href": "https://www.google.com",
+            "status": "Green",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Continuous Improvement",
+            "archetype": "NPBI",
+            "value": 1,
+            "focus": 2,
+            "square": 4,
+            "order": 2,
+            "href": "https://www.google.com",
+            "status": "Green",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Cybersecurity",
+            "archetype": "NPBI",
+            "value": 1,
+            "focus": 2,
+            "square": 4,
+            "order": 3,
+            "href": "https://www.google.com",
+            "status": "Green",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Enbrel",
+            "archetype": "Commercial",
+            "value": 3,
+            "focus": 1,
+            "square": 5,
+            "order": 1,
+            "href": "https://www.google.com",
+            "status": "Green",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Oncology Franchise",
+            "archetype": "Commercial",
+            "value": 3,
+            "focus": 1,
+            "square": 5,
+            "order": 2,
+            "href": "https://www.google.com",
+            "status": "Red",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Biosimilars pipeline",
+            "archetype": "Pipeline",
+            "value": 3,
+            "focus": 1,
+            "square": 6,
+            "order": 3,
+            "href": "https://www.google.com",
+            "status": "Red",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Process Simplification: End-to-End Gross-to-Net",
+            "archetype": "PS",
+            "value": 3,
+            "focus": 1,
+            "square": 7,
+            "order": 5,
+            "href": "https://www.google.com",
+            "status": "Red",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Discovery Research and Platform Innovation",
+            "archetype": "NPBI",
+            "value": 3,
+            "focus": 1,
+            "square": 7,
+            "order": 4,
+            "href": "https://www.google.com",
+            "status": "Red",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Process Simplification: End-to-End Supply Chain",
+            "archetype": "PS",
+            "value": 3,
+            "focus": 1,
+            "square": 7,
+            "order": 6,
+            "href": "https://www.google.com",
+            "status": "Red",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Process Simplification: Evolving Financial Management",
+            "archetype": "PS",
+            "value": 2,
+            "focus": 1,
+            "square": 7,
+            "order": 1,
+            "href": "https://www.google.com",
+            "status": "Red",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Accelerating Digital Innovation: Accelerated Drug Discovery",
+            "archetype": "NPBI",
+            "value": 2,
+            "focus": 1,
+            "square": 7,
+            "order": 2,
+            "href": "https://www.google.com",
+            "status": "Yellow",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Accelerating Digital Innovation: Digital Manufacturing Innovation",
+            "archetype": "NPBI",
+            "value": 2,
+            "focus": 1,
+            "square": 8,
+            "order": 3,
+            "href": "https://www.google.com",
+            "status": "Yellow",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Accelerating Digital Innovation: Predictive, Real Time Sensing",
+            "archetype": "NPBI",
+            "value": 2,
+            "focus": 1,
+            "square": 8,
+            "order": 4,
+            "href": "https://www.google.com",
+            "status": "Yellow",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Incorporate Drug Pricing Legislation into planning",
+            "archetype": "NPBI",
+            "value": 2,
+            "focus": 1,
+            "square": 8,
+            "order": 5,
+            "href": "https://www.google.com",
+            "status": "Yellow",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        },
+        {
+            "name": "Environmental, Social & Governance",
+            "archetype": "NPBI",
+            "value": 1,
+            "focus": 1,
+            "square": 9,
+            "order": 1,
+            "href": "https://www.google.com",
+            "status": "Yellow",
+            "status_details": {
+                "Red": "Lower than 10%",
+                "Yellow": "Between 10% and 80%",
+                "Green": "Greater than 80%"
+            },
+            "description": "This is my description",
+            "ceo_staff_sponsor": "John Doe",
+            "op_team_owner": "Steve Smith"
+        }
+    ]
+}

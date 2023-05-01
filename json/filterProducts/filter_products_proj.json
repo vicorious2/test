@@ -1,0 +1,170 @@
+[
+	{
+		"amg_number" : "ABP 206",
+		"ipp_short_name" : "ABP 206"
+	},
+	{
+		"amg_number" : "ABP 234",
+		"ipp_short_name" : "ABP 234 "
+	},
+	{
+		"amg_number" : "ABP 501",
+		"ipp_short_name" : "AMGEVITA"
+	},
+	{
+		"amg_number" : "ABP 654",
+		"ipp_short_name" : "ABP 654"
+	},
+	{
+		"amg_number" : "ABP 692",
+		"ipp_short_name" : "ABP 692"
+	},
+	{
+		"amg_number" : "ABP 938",
+		"ipp_short_name" : "ABP 938"
+	},
+	{
+		"amg_number" : "ABP 959",
+		"ipp_short_name" : "ABP 959"
+	},
+	{
+		"amg_number" : "AMG 103",
+		"ipp_short_name" : "BLINCYTO ALL R\/R SC"
+	},
+	{
+		"amg_number" : "AMG 103",
+		"ipp_short_name" : "BLINCYTO ALL"
+	},
+	{
+		"amg_number" : "AMG 104",
+		"ipp_short_name" : "AMG 104 Asthma"
+	},
+	{
+		"amg_number" : "AMG 133",
+		"ipp_short_name" : "AMG 133 Obesity"
+	},
+	{
+		"amg_number" : "AMG 145",
+		"ipp_short_name" : "Repatha VESALIUS CV"
+	},
+	{
+		"amg_number" : "AMG 157",
+		"ipp_short_name" : "Tezepelumab CRSwNP"
+	},
+	{
+		"amg_number" : "AMG 157",
+		"ipp_short_name" : "Tezepelumab COPD"
+	},
+	{
+		"amg_number" : "AMG 157",
+		"ipp_short_name" : "Tezepelumab CSU"
+	},
+	{
+		"amg_number" : "AMG 157",
+		"ipp_short_name" : "Tezepelumab EoE"
+	},
+	{
+		"amg_number" : "AMG 334",
+		"ipp_short_name" : "Aimovig Migraine"
+	},
+	{
+		"amg_number" : "AMG 340",
+		"ipp_short_name" : "AMG 340 Prostate Cancer"
+	},
+	{
+		"amg_number" : "AMG 407",
+		"ipp_short_name" : "Otezla Japan PPP"
+	},
+	{
+		"amg_number" : "AMG 407",
+		"ipp_short_name" : "Otezla Peds Plaque PsO"
+	},
+	{
+		"amg_number" : "AMG 407",
+		"ipp_short_name" : "Otezla Daily Dosing (QD) "
+	},
+	{
+		"amg_number" : "AMG 407",
+		"ipp_short_name" : "Otezla Genital PsO"
+	},
+	{
+		"amg_number" : "AMG 451",
+		"ipp_short_name" : "AMG 451 AD"
+	},
+	{
+		"amg_number" : "AMG 509",
+		"ipp_short_name" : "AMG 509 Prostate"
+	},
+	{
+		"amg_number" : "AMG 510",
+		"ipp_short_name" : "LUMAKRAS 2L CRC Mono"
+	},
+	{
+		"amg_number" : "AMG 510",
+		"ipp_short_name" : "LUMAKRAS Early Lung Mono"
+	},
+	{
+		"amg_number" : "AMG 510",
+		"ipp_short_name" : "LUMAKRAS 1LChemo Combo"
+	},
+	{
+		"amg_number" : "AMG 510",
+		"ipp_short_name" : "LUMAKRAS CRC Combos"
+	},
+	{
+		"amg_number" : "AMG 510",
+		"ipp_short_name" : "LUMAKRAS 2L NSCLC Mono"
+	},
+	{
+		"amg_number" : "AMG 531",
+		"ipp_short_name" : "Nplate CIT"
+	},
+	{
+		"amg_number" : "AMG 552",
+		"ipp_short_name" : "AMG 552 2L sq-NSCLC"
+	},
+	{
+		"amg_number" : "AMG 552",
+		"ipp_short_name" : "AMG 552 1L Gastric(BEMA+mFOLFOX)"
+	},
+	{
+		"amg_number" : "AMG 570",
+		"ipp_short_name" : "AMG 570 SLE"
+	},
+	{
+		"amg_number" : "AMG 592",
+		"ipp_short_name" : "AMG 592 SLE"
+	},
+	{
+		"amg_number" : "AMG 592",
+		"ipp_short_name" : "AMG 592 UC"
+	},
+	{
+		"amg_number" : "AMG 714",
+		"ipp_short_name" : "AMG 714 NRCD"
+	},
+	{
+		"amg_number" : "AMG 757",
+		"ipp_short_name" : "AMG 757 NEPC"
+	},
+	{
+		"amg_number" : "AMG 757",
+		"ipp_short_name" : "AMG 757 3L SCLC"
+	},
+	{
+		"amg_number" : "AMG 757",
+		"ipp_short_name" : "AMG 757 1L SCLC"
+	},
+	{
+		"amg_number" : "AMG 757",
+		"ipp_short_name" : "AMG 757 2L SCLC"
+	},
+	{
+		"amg_number" : "AMG 890",
+		"ipp_short_name" : "AMG 890 ASCVD"
+	},
+	{
+		"amg_number" : "AMG 981",
+		"ipp_short_name" : "Kyprolis ARROW-2"
+	}
+]

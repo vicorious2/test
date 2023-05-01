@@ -1,0 +1,111 @@
+{
+"select * from (\n\nSELECT DISTINCT 1 as event_list_order, 'Data Readouts' as key_events_label, a.rec_count, coalesce(ipp_short_name, '') as ipp_short_name, '' as competitor, project_type as data_readout_type, \ndescription, geographic_area, coalesce(end_date_pg_approved_baseline, end_date_current_approved_cab) as end_date, '' as competitor_asset\nFROM edf_prd_cdl_clindev_ppm_publish.ipp_pub_act x   \nINNER JOIN edf_prd_cdl_clindev_ppm_publish.milestone_reference y ON x.milestone_category = y.milestone_category \ncross join (select count() as rec_count  from (SELECT DISTINCT 'Data Readouts' as key_events_label, coalesce(ipp_short_name, '') as ipp_short_name, project_type, description, geographic_area, coalesce(end_date_pg_approved_baseline, end_date_current_approved_cab) as end_date\n\tFROM edf_prd_cdl_clindev_ppm_publish.ipp_pub_act x   \n\tINNER JOIN edf_prd_cdl_clindev_ppm_publish.milestone_reference y ON x.milestone_category = y.milestone_category \n\tWHERE activity_type in ('PRI_AN_FLASH', 'FLASH_MEMO') \n\tAND geographic_area in ('United States', 'European Union', 'Japan', 'China')\n\tAND coalesce(end_date_pg_approved_baseline, end_date_current_approved_cab)  between now() AND  date_add('month', 3, now()))) as a\nWHERE activity_type in ('PRI_AN_FLASH', 'FLASH_MEMO') \nAND geographic_area in ('United States', 'European Union', 'Japan', 'China')\nAND coalesce(end_date_pg_approved_baseline, end_date_current_approved_cab) between now() AND  date_add('month', 3, now())\n\n\n\nunion \n\nSELECT DISTINCT 2 as event_list_order, 'Filings' as key_events_label,a.rec_count, coalesce(ipp_short_name, '') as ipp_short_name,'' as competitor, '' as data_readout_type, \nx.milestone_short_name as description, geographic_area, coalesce(end_date_pg_approved_baseline, end_date_current_approved_cab) as end_date , '' as competitor_asset\nFROM edf_prd_cdl_clindev_ppm_publish.ipp_pub_act x   \nINNER JOIN edf_prd_cdl_clindev_ppm_publish.milestone_reference y ON x.milestone_category = y.milestone_category \ncross join (select count() as rec_count  from (SELECT DISTINCT 'Data Readouts' as key_events_label, coalesce(ipp_short_name, '') as ipp_short_name, project_type, x.milestone_short_name, geographic_area, coalesce(end_date_pg_approved_baseline, end_date_current_approved_cab) as end_date\n\tFROM edf_prd_cdl_clindev_ppm_publish.ipp_pub_act x   \n\tINNER JOIN edf_prd_cdl_clindev_ppm_publish.milestone_reference y ON x.milestone_category = y.milestone_category \n\tWHERE activity_type in ('MA_SUB_DATE_US_COND', 'MA_SUB_DATE_EX_US_COND', 'MA_SUB_DATE_US', 'MA_SUB_DATE_EX_US') \n\tAND geographic_area in ('United States', 'European Union', 'Japan', 'China')\n\tAND coalesce(end_date_pg_approved_baseline, end_date_current_approved_cab) between now() AND  date_add('month', 3, now()))) as a\nWHERE activity_type in ('MA_SUB_DATE_US_COND', 'MA_SUB_DATE_EX_US_COND', 'MA_SUB_DATE_US', 'MA_SUB_DATE_EX_US') \nAND geographic_area in ('United States', 'European Union', 'Japan', 'China')\nAND coalesce(end_date_pg_approved_baseline, end_date_current_approved_cab) between now() AND  date_add('month', 3, now())\n\n\nunion \n\n\nSELECT 3 as event_list_order, 'Launches' as key_events_label, a.rec_count, coalesce(ipp_short_name, '') as ipp_short_name, '' as competitor, '' as data_readout_type, milestone_short_name \nas description, geographic_area, end_date, '' as competitor_asset\nfrom \n(\nSELECT DISTINCT  coalesce(ipp_short_name, '') as ipp_short_name, x.milestone_short_name, geographic_area, coalesce(end_date_pg_approved_baseline, end_date_current_approved_cab) as end_date\nFROM edf_prd_cdl_clindev_ppm_publish.ipp_pub_act x   \nINNER JOIN edf_prd_cdl_clindev_ppm_publish.milestone_reference y ON x.milestone_category = y.milestone_category \nWHERE activity_type in ('LAU_US', 'LAU_EU', 'LAU_OTHER') \nAND geographic_area in ('United States', 'European Union', 'Japan', 'China')\nAND coalesce(end_date_pg_approved_baseline, end_date_current_approved_cab)  between now() AND  date_add('month', 3, now())\nunion \nSELECT DISTINCT coalesce(ipp_short_name, '') as ipp_short_name, x.milestone_short_name, geographic_area, coalesce(end_date_pg_approved_baseline, end_date_current_approved_cab) as end_date\nFROM edf_prd_cdl_clindev_ppm_publish.ipp_bu_pub_act x   \nINNER JOIN edf_prd_cdl_clindev_ppm_publish.milestone_reference y ON x.milestone_category = y.milestone_category \nWHERE geographic_area in ('United States', 'European Union', 'Japan', 'China')\nAND coalesce(end_date_pg_approved_baseline, end_date_current_approved_cab) between now() AND  date_add('month', 3, Now())\n)\ncross join\n\t(\n\tSELECT count(*) as rec_count\n\tfrom (\n\tSELECT DISTINCT  coalesce(ipp_short_name, '') as ipp_short_name, x.milestone_short_name, geographic_area, coalesce(end_date_pg_approved_baseline, end_date_current_approved_cab) as end_date\n\tFROM edf_prd_cdl_clindev_ppm_publish.ipp_pub_act x   \n\tINNER JOIN edf_prd_cdl_clindev_ppm_publish.milestone_reference y ON x.milestone_category = y.milestone_category \n\tWHERE activity_type in ('LAU_US', 'LAU_EU', 'LAU_OTHER') \n\tAND geographic_area in ('United States', 'European Union', 'Japan', 'China')\n\tAND coalesce(end_date_pg_approved_baseline, end_date_current_approved_cab)  between now() AND  date_add('month', 3, now())\n\tunion \n\tSELECT DISTINCT coalesce(ipp_short_name, '') as ipp_short_name, x.milestone_short_name, geographic_area, coalesce(end_date_pg_approved_baseline, end_date_current_approved_cab) as end_date\n\tFROM edf_prd_cdl_clindev_ppm_publish.ipp_bu_pub_act x   \n\tINNER JOIN edf_prd_cdl_clindev_ppm_publish.milestone_reference y ON x.milestone_category = y.milestone_category  \n\tWHERE geographic_area in ('United States', 'European Union', 'Japan', 'China')\n\tAND coalesce(end_date_pg_approved_baseline, end_date_current_approved_cab) between now() AND  date_add('month', 3, Now())\n\t)\n\t) as a\n\n\n\nunion \n\nSELECT DISTINCT 4 as event_list_order, 'Portals' as key_events_label, a.rec_count, coalesce(ipp_short_name, '') as ipp_short_name, '' as competitor, '' \nas data_readout_type, x.milestone_short_name as description, geographic_area, coalesce(end_date_pg_approved_baseline, end_date_current_approved_cab) as end_date, '' as competitor_asset\nFROM edf_prd_cdl_clindev_ppm_publish.ipp_pub_act x   \nINNER JOIN edf_prd_cdl_clindev_ppm_publish.milestone_reference y ON x.milestone_category = y.milestone_category \ncross join (select count() as rec_count  from (SELECT DISTINCT 'Data Readouts' as key_events_label, coalesce(ipp_short_name, '') as ipp_short_name, description, geographic_area, coalesce(end_date_pg_approved_baseline, end_date_current_approved_cab) as end_date\n\tFROM edf_prd_cdl_clindev_ppm_publish.ipp_pub_act x   \n\tINNER JOIN edf_prd_cdl_clindev_ppm_publish.milestone_reference y ON x.milestone_category = y.milestone_category \n\tWHERE activity_type in ('PT_PORTAL','FIH_PORTAL','E2L_PORTAL','POC','CTRS_PORTAL','CTF_PORTAL','CTEF_PORTAL','CTFF_PORTAL','CTL_PORTAL') \n\tAND geographic_area in ('United States', 'European Union', 'Japan', 'China')\n\tAND coalesce(end_date_pg_approved_baseline, end_date_current_approved_cab) between date_add('day', -1, now()) AND  date_add('month', 3, now()))) as a\nWHERE activity_type in ('PT_PORTAL','FIH_PORTAL','E2L_PORTAL','POC','CTRS_PORTAL','CTF_PORTAL','CTEF_PORTAL','CTFF_PORTAL','CTL_PORTAL')\nAND geographic_area in ('United States', 'European Union', 'Japan', 'China')\nAND coalesce(end_date_pg_approved_baseline, end_date_current_approved_cab) between now() AND  date_add('month', 3, now())\n\n)\nORDER BY event_list_order, end_date, ipp_short_name, description\n\n": [
+	{
+		"event_list_order" : 2,
+		"key_events_label" : "Filings",
+		"rec_count" : 3,
+		"ipp_short_name" : "Tezepelumab Sev Asthma",
+		"competitor" : "",
+		"data_readout_type" : "",
+		"description" : "Full Filing",
+		"geographic_area" : "European Union",
+		"end_date" : "2022-08-31",
+		"competitor_asset" : ""
+	},
+	{
+		"event_list_order" : 2,
+		"key_events_label" : "Filings",
+		"rec_count" : 3,
+		"ipp_short_name" : "Nplate 1L AA",
+		"competitor" : "",
+		"data_readout_type" : "",
+		"description" : "Full Filing",
+		"geographic_area" : "Japan",
+		"end_date" : "2022-09-22",
+		"competitor_asset" : ""
+	},
+	{
+		"event_list_order" : 2,
+		"key_events_label" : "Filings",
+		"rec_count" : 3,
+		"ipp_short_name" : "Otezla Genital PsO",
+		"competitor" : "",
+		"data_readout_type" : "",
+		"description" : "Full Filing",
+		"geographic_area" : "United States",
+		"end_date" : "2022-10-12",
+		"competitor_asset" : ""
+	},
+	{
+		"event_list_order" : 3,
+		"key_events_label" : "Launches",
+		"rec_count" : 6,
+		"ipp_short_name" : "AMG 397 MM",
+		"competitor" : "",
+		"data_readout_type" : "",
+		"description" : "Launch",
+		"geographic_area" : "United States",
+		"end_date" : "2022-09-09",
+		"competitor_asset" : ""
+	},
+	{
+		"event_list_order" : 3,
+		"key_events_label" : "Launches",
+		"rec_count" : 6,
+		"ipp_short_name" : "Otezla PsO (mod-to-sev)",
+		"competitor" : "",
+		"data_readout_type" : "",
+		"description" : "Launch",
+		"geographic_area" : "China",
+		"end_date" : "2022-09-15",
+		"competitor_asset" : ""
+	},
+	{
+		"event_list_order" : 3,
+		"key_events_label" : "Launches",
+		"rec_count" : 6,
+		"ipp_short_name" : "AMGEVITA",
+		"competitor" : "",
+		"data_readout_type" : "",
+		"description" : "Full Filing",
+		"geographic_area" : "United States",
+		"end_date" : "2022-09-30",
+		"competitor_asset" : ""
+	},
+	{
+		"event_list_order" : 3,
+		"key_events_label" : "Launches",
+		"rec_count" : 6,
+		"ipp_short_name" : "AMG 420 MM",
+		"competitor" : "",
+		"data_readout_type" : "",
+		"description" : "Launch",
+		"geographic_area" : "European Union",
+		"end_date" : "2022-11-07",
+		"competitor_asset" : ""
+	},
+	{
+		"event_list_order" : 3,
+		"key_events_label" : "Launches",
+		"rec_count" : 6,
+		"ipp_short_name" : "Omecamtiv Heart Failure",
+		"competitor" : "",
+		"data_readout_type" : "",
+		"description" : "Launch",
+		"geographic_area" : "China",
+		"end_date" : "2022-11-09",
+		"competitor_asset" : ""
+	},
+	{
+		"event_list_order" : 3,
+		"key_events_label" : "Launches",
+		"rec_count" : 6,
+		"ipp_short_name" : "ABP 959",
+		"competitor" : "",
+		"data_readout_type" : "",
+		"description" : "Full Filing",
+		"geographic_area" : "United States",
+		"end_date" : "2022-11-23",
+		"competitor_asset" : ""
+	}
+]}
